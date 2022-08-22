@@ -50,29 +50,30 @@ def drawBoard(board):
 
 def inputPlayerLetter():
     # Esta función le permite escoger al usuario entre la letra "X" y la letra "O".
-
-    # retorna una lista de strings donde la letra escogida por el usuario
+    
     playerletter= input("Escoja el simbolo con el que desea jugar (X, O: ")
-    while playerletter != O or playerletter != X:
+    while playerletter != "O" or playerletter != "X":
         print("La opcion ingresada es invalida, vuelva a intentar")
         playerletter= input("Escoja el simbolo con el que desea jugar (X, O: ")
-        
-    # ocupa la primera posición y la letra que le corresponde a la computadora
-    
-    # ocupa la segunda posición.
-
-    # Desarrolle el cuerpo de la función aquí...
-    pass
+    if playerletter=="X":
+        computerletter="O"
+    else:
+        computerletter="X"
+    letter=[playerletter, computerletter]    
+    return letter
 
 def whoGoesFirst():
     # Esta función escoge de forma aleatoria quien inicial el juego.
-
+    first=random.randint(0,1)
     # Retorna el string "Usuario" si el usuario inicia el juego o
+    if first==0:
+        player="Usuario"
+    else:
+        player="Computadora"
     # el string "Computadora" si la computadora inicia el juego.
-
     # Desarrolle el cuerpo de la función aquí...
-    pass
-
+    return player
+    
 def makeMove(board, letter, move):
     # Esta función actualiza el estado del tablero.
 
