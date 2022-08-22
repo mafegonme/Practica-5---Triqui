@@ -161,16 +161,20 @@ def getComputerMove(board, computerLetter):
 
     # 5. Si no, tratar de poner una marca en alguna de las casillas de los lados...
 
-    pass
-
+    
+continuar= false
+FichasEnTablero
 def isBoardFull(board):
     # Esta función verifica si el tablero está lleno.
+    while continuar:
 
     # Argumentos:
     # board: Lista de strings que almacena el estado del tablero.
 
     # Esta función debe retorna el valor lógico True, si el tablero está lleno.
+    continuar= True
+    return continuar
     # En caso contrario debe retornar el valor lógico False.
 
     # Desarrolle el cuerpo de la función aquí...
-    pass
+    
